@@ -5,7 +5,7 @@ source .env
 # Threshold limits
 CPU_THRESHOLD=2
 RAM_THRESHOLD=80
-DISK_THRESHOLD=90
+DISK_THRESHOLD=80
 
 # Store values
 RAM_USAGE=$(free -m | awk 'NR==2{printf "%.0f", $3*100/$2 }')
