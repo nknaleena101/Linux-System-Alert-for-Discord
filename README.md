@@ -22,8 +22,8 @@ Follow these steps to set up the monitor on your local machine or server.
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/nknaleena101/Linux-System-Alert-Script-for-Discord.git
-cd Linux-System-Alert-Script-for-Discord
+git clone https://github.com/nknaleena101/Linux-System-Alert-for-Discord.git
+cd Linux-System-Alert-for-Discord
 ```
 
 **2. Setup Environment Variables**
