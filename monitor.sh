@@ -1,11 +1,12 @@
 #!/bin/bash
 
-source .env
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/.env"
 
 # Threshold limits
-CPU_THRESHOLD=2
+CPU_THRESHOLD=80
 RAM_THRESHOLD=80
-DISK_THRESHOLD=80
+DISK_THRESHOLD=90
 
 # Store values
 RAM_USAGE=$(free -m | awk 'NR==2{printf "%.0f", $3*100/$2 }')
@@ -33,7 +34,7 @@ if [ -n "$ALERT_MESSAGE" ]; then
 	# creating a json payload
 	PAYLOAD=$(cat <<EOF
 {
-"content": "🚨 **System Alert!** 🚨\n${ALERT_MESSAGE}"
+"content": "**System Alert!**\n${ALERT_MESSAGE}"
 }
 EOF
 )
